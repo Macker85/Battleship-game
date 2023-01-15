@@ -53,5 +53,24 @@ class Battleship:
 def StartGame():
     enemy_board = GameBoard([[" "] * 6 for i in range(6)])
     player_board = GameBoard([[" "] * 6 for i in range(6)])
-    Battleship.print_game(enemy_board)
-    
+    Battleship.deploy_fleet(enemy_board)
+    turns = 15
+    while turns > 0:
+        GameBoard.print_game(player_board)
+        player_x_row, player_y_col = Battleship.get_user_shot(object)
+        while player_board.board[player_x_row][player_y_col] == "-" or player_board.board[player_x_row][player_y_col] == "X":
+            print("You have already destroyed this location")
+            player_x_row, player_y_col = Battleship.get_user_shot(object)
+        if enemy_board.board[player_x_row][player_y_col] == "X":
+            print("That is a direct hit!")
+            player_board.board[player_x_row][player_y_col] = "X"
+        else:
+            print("That is a miss!")
+            player_board.board[player_x_row][player_y_col] = "-"
+        if Battleship.count_direct_hits(player_board) = 4:
+            print("You sunk all enemy battleships!")
+            break
+        else:
+            turns -= 1
+            print(f"you have {turns} turns remaining")
+            
