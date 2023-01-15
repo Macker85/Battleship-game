@@ -1,5 +1,6 @@
 import random
 
+
 class GameBoard:
     def __init__(self, board):
         self.board = board
@@ -14,28 +15,43 @@ class GameBoard:
         row_number = 1
         for row in self.board:
             print("%d|%s|" % (row_number, "|".join(row)))
-            row_number +=1
+            row_number += 1
+
 
 class Battleship:
     def __init__(self, board):
         self.board = board
 
-    def make_ships(self):
+    def deploy_fleet(self):
         for i in range(4):
             self.x_row, self.y_col = random.randint(0, 5), random.randint(0, 5)
             while self.board[self.x_row][self.y_col] == 'X':
-                self.board[self.x_row][self.y_col] = random.randint(0, 5), random.randint(0, 5)
+                self.x_row = random.randint(0, 5)
+                self.y_col = random.randint(0, 5)
             self.board[self.x_row][self.y_col] = 'X'
         return self.board
 
     def get_user_shot(self):
         try:
-            x_row = input("Enter a row number on board:")
+            x_row = input("Enter a row number on board(1-6):")
             while x_row not in '123456':
-                print("Not a valid input, please enter a row number on board:")
-
-                y_col = input("Enter a column letter on board:").upper()
-            return int(x_row) -1, GameBoard.get_letters_to_numbers()[y_col]
+                print("Invalid input, enter a row number on board(1-6):")
+                y_col = input("Enter a column letter on board (A-F):").upper()
+            return int(x_row) - 1, GameBoard.get_letters_to_numbers()[y_col]
         except ValueError and KeyError:
-            print("Not a valid input, please enter a column letter on board:")
-            return self.get_user_shot()
+            print("Invalid input, please enter a column letter on board(A-F):")
+
+    def count_direct_hits(self):
+        direct_hit = 0
+        for row in self.board:
+            for column in row:
+                if column == "X":
+                    direct_hit += 1
+        return direct_hit
+
+
+def StartGame():
+    enemy_board = GameBoard([[" "] * 6 for i in range(6)])
+    player_board = GameBoard([[" "] * 6 for i in range(6)])
+    Battleship.print_game(enemy_board)
+    
