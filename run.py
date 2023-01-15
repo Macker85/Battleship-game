@@ -1,7 +1,7 @@
 import random
 
 class GameBoard:
-    def__init__(self, board):
+    def __init__(self, board):
         self.board = board
 
     def get_letters_to_numbers():
@@ -28,4 +28,14 @@ class Battleship:
             self.board[self.x_row][self.y_col] = 'X'
         return self.board
 
+    def get_user_shot(self):
+        try:
+            x_row = input("Enter a row number on board:")
+            while x_row not in '123456':
+                print("Not a valid input, please enter a row number on board:")
 
+                y_col = input("Enter a column letter on board:").upper()
+            return int(x_row) -1, GameBoard.get_letters_to_numbers()[y_col]
+        except ValueError and KeyError:
+            print("Not a valid input, please enter a column letter on board:")
+            return self.get_user_shot()
