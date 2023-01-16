@@ -85,6 +85,13 @@ class Battleship:
             print("Not a valid input. Enter a letter or a number.")
             return self.get_user_shot()
 
+    def get_enemy_shot(self):
+        y_col = random.choice([
+            "A", "B", "C", "D", "E", "F"
+        ]).upper()
+        x_row = random.randint(0, 5)
+        return int(x_row) - 1, GameBoard.get_letters_to_numbers()[y_col]
+
     def count_direct_hits(self):
         """_summary_
 
@@ -99,15 +106,26 @@ class Battleship:
         return direct_hit
 
 
-def StartGame():
+def start_game():
+    """
+    _summary_
+    """
     enemy_board = GameBoard([[" "] * 6 for i in range(6)])
+    enemy_target_board = GameBoard([[" "] * 6 for i in range(6)])
     player_board = GameBoard([[" "] * 6 for i in range(6)])
+    player_target_board = GameBoard([[" "] * 6 for i in range(6)])
     Battleship.deploy_fleet(enemy_board)
+    Battleship.deploy_fleet(player_board)
     turns = 15
+    enemy_turns = 15
     while turns > 0:
         GameBoard.print_game(player_board)
+        GameBoard.print_game(enemy_board)
         player_x_row, player_y_col = Battleship.get_user_shot(object)
-        while player_board.board[player_x_row][player_y_col] == "-" or player_board.board[player_x_row][player_y_col] == "X":
+        while (
+            player_target_board.board[player_x_row][player_y_col] == "-" 
+            or player_board.board[player_x_row][player_y_col] == "X"
+        ):
             print("You have already destroyed this location")
             player_x_row, player_y_col = Battleship.get_user_shot(object)
         if enemy_board.board[player_x_row][player_y_col] == "X":
@@ -125,8 +143,29 @@ def StartGame():
             if turns == 0:
                 print("You have run out of ammunition")
                 GameBoard.print_game(player_board)
-                break
+        #computer input
+        enemy_x_row, enemy_y_col = Battleship.get_user_shot(object)
+        while (
+            enemy_board.board[enemy_x_row][enemy_y_col] == "-" 
+            or enemy_board.board[enemy_x_row][enemy_y_col] == "X"
+        ):
+            enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
+        if player_board.board[enemy_x_row][enemy_y_col] == "X":
+            print("That is a direct hit!")
+            enemy_target_board.board[enemy_x_row][enemy_y_col] = "X"
+        else:
+            print("That is a miss!")
+            enemy_target_board.board[enemy_x_row][enemy_y_col] = "-"
+        if Battleship.count_direct_hits(enemy_board) == 4:
+            print("Ypur fleet has been destroyed!")
+            break
+        else:
+            enemy_turns -= 1
+            if turns == 0:
+                print("The enemy is out of ammunition.")
+                GameBoard.print_game(enemy_board)
+    # game_over()
 
 
 if __name__ == '__main__':
-    StartGame()
+    start_game()
