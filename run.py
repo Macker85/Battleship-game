@@ -9,13 +9,14 @@ class GameBoard:
     def __init__(self, board):
         self.board = board
 
+    @staticmethod
     def get_letters_to_numbers():
         letter_to_numbers = {
             "A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6}
         return letter_to_numbers
 
     def print_game(self):
-        print(" A B C D E F G")
+        print("  A B C D E F")
         print(" -------------")
         row_number = 1
         for row in self.board:
@@ -51,15 +52,45 @@ class Battleship:
         Returns the input as invalid or hit or miss.
         """
         try:
-            x_row = input("Enter a co-ordinate(1-6):")
-            while x_row not in '123456':
-                print("Invalid input, co-ordinate(1-6):")
-                y_col = input("Enter a cco-ordinate (A-F):").upper()
+            y_col = input("Enter your first co-ordinate(A-F): ").upper()
+            if y_col:
+                while y_col not in "ABCDEF":
+                    print("invalid co-ordinate, enter a letter A-F")
+                    y_col = input("Enter the first co-ordinate(A-F): ").upper()
+                    continue
+            else:
+                while not y_col:
+                    print("Invalid Input. Enter a letter A-F.")
+                    y_col = input("Enter Co-Ordinate (A-F): ").upper()
+                    while y_col not in "ABCDEF":
+                        print("Invalid co-ordinate. Enter a letter A-F.")
+                        y_col = input("Enter Co-Ordinate (A-F): ").upper()
+                    continue
+            x_row = input("Enter your second co-ordinate(1-6): ")
+            if x_row:
+                while x_row not in "123456":
+                    print("Invalid co-ordinate. Enter a number 1-6.")
+                    x_row = input("Enter Co-Ordinate (1-6): ")
+                    continue
+            else:
+                while not x_row:
+                    print("Empty Input. Enter a number 1-6.")
+                    x_row = input("Enter Co-Ordinate (1-6): ")
+                    while x_row not in "123456":
+                        print("Invalid co-ordinate. Enter a number 1-6.")
+                        x_row = input("Enter Co-Ordinate (1-6): ")
+                    continue
             return int(x_row) - 1, GameBoard.get_letters_to_numbers()[y_col]
-        except ValueError() and KeyError():
-            print("Invalid input, please enter a co-ordinate(A-F):")
+        except ValueError and KeyError:
+            print("Not a valid input. Enter a letter or a number.")
+            return self.get_user_shot()
 
     def count_direct_hits(self):
+        """_summary_
+
+        Returns:
+            _type_: _description_
+        """
         direct_hit = 0
         for row in self.board:
             for column in row:

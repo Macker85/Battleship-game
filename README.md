@@ -255,9 +255,9 @@ There were no errors or warnings flagged in test_login.py
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| Spacings between classes too small, stopped programme running | adjusted spacings |
-<!-- | Missile counter decreased by two each round. | Seperated missile variable into two; one for the user and computer. |
-| Check Login function would not validate user input. | Changed syntax of the Login function if/elif statements. | -->
+| Spacings between classes too small, stopped programme running. | adjusted spacings |
+| Game crashing after guess input. | Fix typo in y-col input. |
+| Check Login function would not validate user input. | Changed syntax of the Login function if/elif statements. |
 
 ## Deployment
 <!-- Use the following steps to deploy the poject to Heroku:
