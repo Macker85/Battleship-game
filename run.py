@@ -108,7 +108,10 @@ class Battleship:
 
 def start_game():
     """
-    _summary_
+    Lauch game.
+    Generate player board and enemy board.
+    Load ships.
+    Defines turn limit
     """
     enemy_board = GameBoard([[" "] * 6 for i in range(6)])
     enemy_target_board = GameBoard([[" "] * 6 for i in range(6)])
