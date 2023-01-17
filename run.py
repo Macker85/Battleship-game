@@ -1,11 +1,11 @@
 import random
-    """
-    imports random for randomising board
-    """
 
 import colorama
 from colorama import Fore, Back
 colorama.init()
+
+def login():
+    
 
 
 class GameBoard:
@@ -18,13 +18,20 @@ class GameBoard:
 
     @staticmethod
     def get_letters_to_numbers():
+        """
+        converts letter to numbers to read in terminal
+        Returns converted numbers
+        """
         letter_to_numbers = {
             "A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6}
         return letter_to_numbers
 
     def print_game(self):
-        print(f"{Fore.CYAN}{Back.BLACK}  A B C D E F")
-        print(" -------------")
+        """
+        prints out board and adds colour
+        """
+        print(f"\n{Fore.CYAN}{Back.BLACK}  A B C D E F")
+        print(" ^^^^^^^^^^^^^")
         row_number = 1
         for row in self.board:
             print("%d|%s|" % (row_number, "|".join(row)))
@@ -157,7 +164,6 @@ def start_game():
             if turns == 0:
                 print("You have run out of ammunition")
                 GameBoard.print_game(player_board)
-        #computer input
         enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
         while (
             enemy_target_board.board[enemy_x_row][enemy_y_col] == "-" 
@@ -178,7 +184,6 @@ def start_game():
             if turns == 0:
                 print("The enemy is out of ammunition.")
                 GameBoard.print_game(enemy_board)
-    # game_over()
 
 
 if __name__ == '__main__':

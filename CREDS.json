@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "battleship-usernamepassword",
+  "private_key_id": "e210cb85288b9cafde9b37d2f1fd01507069e53d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDWtyEAzJhSPxjR\nho6DC8nS8nY7xU3D0phe4/Q/jzPn/Pbt0jvBgIZnFv5CT8kxiPoDgb7taZkWc8TG\n9rjQWMQzX95c/cH1Ix5+Av+54HYpYnT1ouvOtdqrOV71ZEHapQ6HyGNvizQSfuk1\nEavK5/jnk72u4KJQb47PKm6XIaVswqlC0BvlMWHdJ4EpIHeu2i9Uuw0NvYOl55Wj\nJVCPjs7KbH311MyC+iyECiCkOYkSqizjfHc+5pcwdKEDda6KxMvvdP7q4FqCOJjX\ne/MICs9UE0pi1Af057Gpz/mE7WHr3f4700ac5/PSqHUt0pHAPn4toXUhMP8odFIv\n0J6ktRupAgMBAAECggEAM/0A0nT3b7ij3X2nTX8h9b/r1VKTXvYDmzw2FFqr3oC/\nWDuWaOaiBF2KoEs5w5LvOECm1kzCeq96xpMQEjBgBzFwAZOWrjB77lZzDVJWQfR7\nLcuuLW2WXe2E+sU09cgP0dw5CVXK/Kx6cnVOI5HR0F6TJ7/vxSqRyUL0pobIy2GP\n4z6Rjnlh/UbTafosDMJFqAKJjL2rciyzWkDy22bN8XYBQ4yV2t8Az5sYwOgV6egO\nMoTQuClJXrWhqsXxoqBlKWakWdUPcsLAwDJh6auOBK2LbVRkre2SxzN0VzQby8dd\no5ZSWwhvr5IEIZftDGnjPzUVhR+XeiZOSw9bGArTpQKBgQD9PG0COWWbbMaxpEjs\ntC1aFOQgnfIZto/MMChZVdnpa5px8CzLzqG7egGbnzL9okm+6c2UTdGRsQ4xA6yB\niyKn47iIhkElo0uJoUx3a6QWMBc40JenNeEsxoWmLwNsSNRfFIDjh0WVARP372zn\nOKdiYWp6F/iDJYpYWpSyneNhPQKBgQDZDxJB/YrGyYwg1e2j8iXToKQ8vMsJI/AK\nSa3eXwPnsXpbd6hLcMmWGT53UJH4vj8SwUdLLSkljb4CMUeVBaJgzjBCjPKHNCDd\npwIkzaSsoDPWk1DMRDO5WfnVhWTIbB9wS+hgAWcq2cOiXA97cMJg2UoEifiVqrHs\nWyqiFmFy3QKBgQCD0C0pqDi0U0WFd+8hjpPAvPkV5UD8k2N8NGD8R0y7THBC+HJI\nz9Ctpk8p8w72qL/cKRUCKhN404GAj9n+QC8U1trZ7ZABiGMsS5Ji4tuxVOzxfNpD\nhi8kQF2W6AfPGIW6zBBe3q2gZsQ/HRhBruKpue1TiiCoGyVM4jFeXALcPQKBgD7N\nX4j8ZPTTR9oQS6vN2if7KMnyDgTdAwzW+JmIgEa/URm561W4knr9XteC1llUIke4\n6HnV3TviYQGdZIq3kJ3VypzWzy1TZdb8BWDEp0rTJ2yEPzJ64URVxjWDXP+oWQhS\nzi9I+KKrUzFc1ZXvsC35cLMTgHs9YjFyx0kSlKt5AoGBAKBLfbwxq7WoDYncZN4u\nNolzwhaBps/20rGTmCVUvFeX5A2SdzFynbikkjAl8Qwa9CiIFIxHRDeUZgYu//Xq\nfrsciCw8pgCBaOj6YsNDP2OlHc90RDVsqrUZWX4bllhzdXZUPBybQFxGEQbcyXdu\nUFE4dZz+H8jVfjmjr9muZ5Dp\n-----END PRIVATE KEY-----\n",
+  "client_email": "battleship-username-and-passwo@battleship-usernamepassword.iam.gserviceaccount.com",
+  "client_id": "109201326699025552280",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/battleship-username-and-passwo%40battleship-usernamepassword.iam.gserviceaccount.com"
+}
