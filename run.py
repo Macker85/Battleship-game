@@ -20,7 +20,7 @@ class GameBoard:
         return letter_to_numbers
 
     def print_game(self):
-        print("  A B C D E F")
+        print(f"{Fore.CYAN}{Back.BLACK}  A B C D E F")
         print(" -------------")
         row_number = 1
         for row in self.board:
