@@ -1,5 +1,9 @@
 import random
 
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
+
 
 class GameBoard:
     """
@@ -131,16 +135,16 @@ def start_game():
         player_x_row, player_y_col = Battleship.get_user_shot(object)
         while (
             player_target_board.board[player_x_row][player_y_col] == "-" 
-            or player_board.board[player_x_row][player_y_col] == "X"
+            or player_target_board.board[player_x_row][player_y_col] == "X"
         ):
             print("You have already destroyed this location")
             player_x_row, player_y_col = Battleship.get_user_shot(object)
         if enemy_board.board[player_x_row][player_y_col] == "X":
             print("That is a direct hit!")
-            player_board.board[player_x_row][player_y_col] = "X"
+            player_target_board.board[player_x_row][player_y_col] = "X"
         else:
             print("That is a miss!")
-            player_board.board[player_x_row][player_y_col] = "-"
+            player_target_board.board[player_x_row][player_y_col] = "-"
         if Battleship.count_direct_hits(player_board) == 4:
             print("You sunk all enemy battleships!")
             break
