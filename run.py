@@ -86,6 +86,11 @@ class Battleship:
             return self.get_user_shot()
 
     def get_enemy_shot(self):
+        """
+        Generates computer guess.
+        Taken from random integer and letter.
+        Returns guess co-ordinate
+        """
         y_col = random.choice([
             "A", "B", "C", "D", "E", "F"
         ]).upper()
@@ -93,10 +98,9 @@ class Battleship:
         return int(x_row) - 1, GameBoard.get_letters_to_numbers()[y_col]
 
     def count_direct_hits(self):
-        """_summary_
-
-        Returns:
-            _type_: _description_
+        """
+        Confirms hit with location 'X'
+        Returns a direct hit on a battleship
         """
         direct_hit = 0
         for row in self.board:
@@ -122,8 +126,8 @@ def start_game():
     turns = 15
     enemy_turns = 15
     while turns > 0:
-        GameBoard.print_game(player_board)
-        GameBoard.print_game(enemy_board)
+        GameBoard.print_game(player_target_board)
+        GameBoard.print_game(enemy_target_board)
         player_x_row, player_y_col = Battleship.get_user_shot(object)
         while (
             player_target_board.board[player_x_row][player_y_col] == "-" 
@@ -147,20 +151,20 @@ def start_game():
                 print("You have run out of ammunition")
                 GameBoard.print_game(player_board)
         #computer input
-        enemy_x_row, enemy_y_col = Battleship.get_user_shot(object)
+        enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
         while (
-            enemy_board.board[enemy_x_row][enemy_y_col] == "-" 
-            or enemy_board.board[enemy_x_row][enemy_y_col] == "X"
+            enemy_target_board.board[enemy_x_row][enemy_y_col] == "-" 
+            or enemy_target_board.board[enemy_x_row][enemy_y_col] == "X"
         ):
             enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
-        if player_board.board[enemy_x_row][enemy_y_col] == "X":
+        if enemy_board.board[enemy_x_row][enemy_y_col] == "X":
             print("That is a direct hit!")
             enemy_target_board.board[enemy_x_row][enemy_y_col] = "X"
         else:
             print("That is a miss!")
             enemy_target_board.board[enemy_x_row][enemy_y_col] = "-"
         if Battleship.count_direct_hits(enemy_board) == 4:
-            print("Ypur fleet has been destroyed!")
+            print("Your fleet has been destroyed!")
             break
         else:
             enemy_turns -= 1
