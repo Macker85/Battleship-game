@@ -1,7 +1,10 @@
 import random
+    """
+    imports random for randomising board
+    """
 
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Back
 colorama.init()
 
 
