@@ -22,21 +22,44 @@ username = SHEET.worksheet("usernames")
 
 MARKER = '~' * 40
 
+
 def login():
     """
     Loads login and welcome screen.
     Looks for username and password.
 
     """
-    print(\nMARKER)
+    print(MARKER)
     print("         Welcome to Battleship")
-    print("      A game of logic and chance")P
+    print("      A game of logic and chance")
     print("Deploy your fleet and prepare for battle")
     print(MARKER)
     user = input("\nUsername: ")
-    print(f"The username provided is {user}")
-    
+    print(f"Good luck {user}")
+    start_game()
 
+    # validate_user(user)
+
+
+# def update_username_sheet(data):
+#     """
+
+#     """
+
+# def validate_user(values):
+#     """
+#     Validates username against googlesheets.
+#     Return error message if in user.
+#     Prompt to try again
+#     """
+#     not_available = SHEET["A"].value
+#     if user in not_available:
+#         print("Username in use, please choose again")
+#         login()
+#     else:
+#         start_game()
+
+    
 class GameBoard:
     """
     Stores the values for generating the game board.
@@ -213,6 +236,18 @@ def start_game():
             if turns == 0:
                 print("The enemy is out of ammunition.")
                 GameBoard.print_game(enemy_board)
+
+def end_game() -> str:
+    print("Game over!")
+    play_again = input("Play again? Y/N: ").upper
+
+    if str(play_again) == 'Y':
+        start_game()
+    elif str(play_again) == 'N':
+        print(f"Thank you for playing, see you next time {user}")
+    elif str(play_again) not in {"Y", "N"}:
+        print("please enter Y/N")
+        end_game()
 
 
 if __name__ == '__main__':
