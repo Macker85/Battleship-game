@@ -13,14 +13,14 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
     ]
 
-CREDS = Credentials.from_service_account_file("creds.json")
+CREDS = Credentials.from_service_account_file("CREDS.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("battleship usernames")
 
 username = SHEET.worksheet("usernames")
 
-MARKER = '~' * 15
+MARKER = '~' * 40
 
 def login():
     """
@@ -28,13 +28,13 @@ def login():
     Looks for username and password.
 
     """
-    print(MARKER)
-    print("Welcome to Battleship")
-    print("A game of logic and chance")
+    print(\nMARKER)
+    print("         Welcome to Battleship")
+    print("      A game of logic and chance")P
     print("Deploy your fleet and prepare for battle")
     print(MARKER)
-    input("\nUsername: ")
-    input("Password: ")
+    user = input("\nUsername: ")
+    print(f"The username provided is {user}")
     
 
 class GameBoard:
