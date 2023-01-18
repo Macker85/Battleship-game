@@ -4,9 +4,30 @@ import colorama
 from colorama import Fore, Back
 colorama.init()
 
+import gspread
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file("creds.json")
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open("battleship usernames")
+
+username = SHEET.worksheet("usernames")
+
 MARKER = '~' * 15
 
 def login():
+    """
+    Loads login and welcome screen.
+    Looks for username and password.
+
+    """
     print(MARKER)
     print("Welcome to Battleship")
     print("A game of logic and chance")
@@ -15,7 +36,6 @@ def login():
     input("\nUsername: ")
     input("Password: ")
     
-
 
 class GameBoard:
     """
