@@ -4,7 +4,16 @@ import colorama
 from colorama import Fore, Back
 colorama.init()
 
+MARKER = '~' * 15
+
 def login():
+    print(MARKER)
+    print("Welcome to Battleship")
+    print("A game of logic and chance")
+    print("Deploy your fleet and prepare for battle")
+    print(MARKER)
+    input("\nUsername: ")
+    input("Password: ")
     
 
 
@@ -187,4 +196,4 @@ def start_game():
 
 
 if __name__ == '__main__':
-    start_game()
+    login()
