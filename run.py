@@ -26,19 +26,49 @@ MARKER = '~' * 40
 def login():
     """
     Loads login and welcome screen.
-    Looks for username and password.
-
+    Asks user if they have played the game before.
+    Looks for username and password, checks if correct.
     """
-    print(MARKER)
-    print("         Welcome to Battleship")
-    print("      A game of logic and chance")
-    print("Deploy your fleet and prepare for battle")
-    print(MARKER)
-    user = input("\nUsername: ")
-    print(f"Good luck {user}")
-    start_game()
+    while True:
+        print(MARKER)
+        print("         Welcome to Battleship")
+        print("      A game of logic and chance")
+        print("Deploy your fleet and prepare for battle")
+        print(MARKER)
+        return_player = input("Have you played before? Y/N \n").upper()
 
-    # validate_user(user)
+        if str(return_player) == 'y':
+            known_player()
+        elif str(return_player) == 'n':
+            new_player()
+
+        if validate_user(return_player):
+            break
+    return return_player
+
+
+
+        # user = input("\nUsername: \n")
+        # print(f"Good luck {user}")
+        # start_game()
+
+def validate_user(return_player: str):
+    """
+    Checks for acceptable input
+    Alert error if not
+    Args:
+    return_player (str): user input 
+    """
+    try:
+        str(return_player)
+        if return_player not in {"y", "n"}:
+            raise ValueError("Invalid entry.")
+    except ValueError as e:
+        print(f"{e} entry must be Y/N. Please try again.")
+        return False
+    
+    return True
+
 
 
 # def update_username_sheet(data):
@@ -237,7 +267,13 @@ def start_game():
                 print("The enemy is out of ammunition.")
                 GameBoard.print_game(enemy_board)
 
+
 def end_game() -> str:
+    """
+    Runs well ships are sunk.
+    Runs when turns run out.
+    Asks user to play again or exit.
+    """
     print("Game over!")
     play_again = input("Play again? Y/N: ").upper
 
