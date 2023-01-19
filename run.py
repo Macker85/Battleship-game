@@ -60,7 +60,7 @@ def validate_user(return_player: str):
     except ValueError as e:
         print(f"{e} entry must be Y/N. Please try again.")
         return False
-    
+
     return True
 
 
@@ -151,12 +151,10 @@ class Battleship:
         For statement loops through ships positions.
         Generates random integers and assigns 'X' as a ship in location.
         """
-        for i in range(4):
+        for i in range(5):
             self.x_row, self.y_col = random.randint(0, 5), random.randint(0, 5)
-            while self.board[self.x_row][self.y_col] == 'X':
-                self.x_row = random.randint(0, 5)
-                self.y_col = random.randint(0, 5)
-            self.board[self.x_row][self.y_col] = 'X'
+            print(f"Co-ordinate {self.x_row} {self.y_col}")
+            self.board[self.x_row][self.y_col] = '@'
         return self.board
 
     def get_user_shot(self):
@@ -243,29 +241,28 @@ def start_game():
         GameBoard.print_game(enemy_target_board)
         player_x_row, player_y_col = Battleship.get_user_shot(object)
         while (
-            player_target_board.board[player_x_row][player_y_col] == "-" 
+            player_target_board.board[player_x_row][player_y_col] == "-"
             or player_target_board.board[player_x_row][player_y_col] == "X"
         ):
             print("You have already destroyed this location")
             player_x_row, player_y_col = Battleship.get_user_shot(object)
-        if enemy_board.board[player_x_row][player_y_col] == "X":
+        if enemy_board.board[player_x_row][player_y_col] == "@":
             print("That is a direct hit!")
             player_target_board.board[player_x_row][player_y_col] = "X"
         else:
             print("That is a miss!")
             player_target_board.board[player_x_row][player_y_col] = "-"
-        if Battleship.count_direct_hits(player_board) == 4:
+        if Battleship.count_direct_hits(player_board) == 5:
             print("You sunk all enemy battleships!")
             break
-        else:
-            turns -= 1
-            print(f"you have {turns} turns remaining")
-            if turns == 0:
-                print("You have run out of ammunition")
-                GameBoard.print_game(player_board)
+        turns -= 1
+        print(f"you have {turns} turns remaining")
+        if turns == 0:
+            print("You have run out of ammunition")
+            GameBoard.print_game(player_board)
         enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
         while (
-            enemy_target_board.board[enemy_x_row][enemy_y_col] == "-" 
+            enemy_target_board.board[enemy_x_row][enemy_y_col] == "-"
             or enemy_target_board.board[enemy_x_row][enemy_y_col] == "X"
         ):
             enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
@@ -275,14 +272,13 @@ def start_game():
         else:
             print("That is a miss!")
             enemy_target_board.board[enemy_x_row][enemy_y_col] = "-"
-        if Battleship.count_direct_hits(enemy_board) == 4:
+        if Battleship.count_direct_hits(enemy_board) == 5:
             print("Your fleet has been destroyed!")
             break
-        else:
-            enemy_turns -= 1
-            if turns == 0:
-                print("The enemy is out of ammunition.")
-                GameBoard.print_game(enemy_board)
+        enemy_turns -= 1
+        if turns == 0:
+            print("The enemy is out of ammunition.")
+            GameBoard.print_game(enemy_board)
 
 
 def end_game() -> str:
