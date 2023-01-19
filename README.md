@@ -257,10 +257,11 @@ There were no errors or warnings flagged in test_login.py
 | ----------- | ----------- |
 | Spacings between classes too small, stopped programme running. | adjusted spacings |
 | Game crashing after guess input. | Fix typo in y-col input. |
-| Check Login function would not validate user input. | Changed syntax of the Login function if/elif statements. |
+| Game looping after entering new player | Fixed typo in new player function |
+| Computer counting all ships as hits and ending game | Changed ship symbol |
 
 ## Deployment
-Use the following steps to deploy the poject to Heroku:
+<!-- Use the following steps to deploy the poject to Heroku:
 1. Use the "pip freeze -> requiremnts.txt" command in the gitPod terminal; to save any libraries that need to be installed to the project files in Heroku.
 2. You will need a Heroku account for deployment, if you don't have one you will need to create one. Once done, log into Heroku.
 3. Click the "New" button in the upper right corner and select "Create New App".
@@ -271,20 +272,22 @@ Use the following steps to deploy the poject to Heroku:
 8. Go to the "Deploy" tab and pick GitHub as a deployment method.
 9. Search for a repository to connect to.
 10. Click enable automatic deploys and then deploy branch.
-11. Wait for the app to build and then click on the "View" link.
+11. Wait for the app to build and then click on the "View" link. -->
 
 You can fork the repository by following these steps:
-<!-- 1. Go to the GitHub repository.
-2. Click on the Fork button in the upper right-hand corner. -->
+1. Login or signup to [GitHub](https://github.com/)
+2. Find the relevant repo, which is in this case ['Battleship-Game'](https://github.com/Macker85/Battleship-game)
+3. Click on the 'Fork' button in the upper left.
+4. A forked version of this repo will be generated.
 
 You can clone the repository by following these steps:
-<!-- 1. Go to the GitHub repository.
-2. Locate the Code button above the list of files and click it.
-3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard.
+1. On GitHub.com, navigate to the main page of the repository which is ['here'](https://github.com/)
+2. Above the list of files, click  Code.
+3. Copy the URL for the repository.
 4. Open Git Bash.
-5. Change the current working directory to the one where you want the cloned directory.
-6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY).
-7. Press Enter to create your local clone. -->
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type git clone, and then paste the URL you copied earlier.
+7. Press Enter to create your local clone.
 
 ## Credits
 
