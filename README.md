@@ -1,13 +1,13 @@
 # Battleships
 
-Battleships is a game of logic, with players attempting to sink each others fleet by guessing co-ordinates.
-This version uses a a board generated using Python lists and incorporates a logic engine to allow the computer to fire back at the user.
+Battleship is a game of chance and logic where players attempt to sink each others ships by guessing co-ordinates.
+In this game you have a Python generated board of rows and columns and play against the computer that will randomised guesses to try sink the users ships.
 
-(Developer: Stuart Wall)
+(Developer: Paul McCormack)
 
-![Start screen]()
+![Start screen](/DOCS/game/start_screen.png)
 
-[Live webpage]()
+[Live webpage](https://battleship-pp3-macker85.herokuapp.com/)
 
 ## Table of Content
 
