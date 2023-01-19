@@ -174,12 +174,12 @@ class Battleship:
             else:
                 while not y_col:
                     print("Invalid Input. Enter a letter A-F.")
-                    y_col = input("Enter Co-Ordinate (A-F): ").upper()
+                    y_col = input("Enter Co-Ordinate (A-F): \n").upper()
                     while y_col not in "ABCDEF":
                         print("Invalid co-ordinate. Enter a letter A-F.")
                         y_col = input("Enter Co-Ordinate (A-F): ").upper()
                     continue
-            x_row = input("Enter your second co-ordinate(1-6): ")
+            x_row = input("Enter your second co-ordinate(1-6): \n")
             if x_row:
                 while x_row not in "123456":
                     print("Invalid co-ordinate. Enter a number 1-6.")
@@ -188,10 +188,10 @@ class Battleship:
             else:
                 while not x_row:
                     print("Empty Input. Enter a number 1-6.")
-                    x_row = input("Enter Co-Ordinate (1-6): ")
+                    x_row = input("Enter Co-Ordinate (1-6): \n")
                     while x_row not in "123456":
                         print("Invalid co-ordinate. Enter a number 1-6.")
-                        x_row = input("Enter Co-Ordinate (1-6): ")
+                        x_row = input("Enter Co-Ordinate (1-6): \n")
                     continue
             return int(x_row) - 1, GameBoard.get_letters_to_numbers()[y_col]
         except ValueError and KeyError:
@@ -292,7 +292,7 @@ def end_game() -> str:
     Asks user to play again or exit.
     """
     print("Game over!")
-    play_again = input("Play again? Y/N: ").upper
+    play_again = input("Play again? Y/N: \n").upper
 
     if str(play_again) == 'Y':
         start_game()
