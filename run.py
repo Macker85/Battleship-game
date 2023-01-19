@@ -37,9 +37,9 @@ def login():
         print(MARKER)
         return_player = input("Have you played before? Y/N \n").upper()
 
-        if str(return_player) == 'y':
+        if str(return_player) == 'Y':
             known_player()
-        elif str(return_player) == 'n':
+        elif str(return_player) == 'N':
             new_player()
 
         if validate_user(return_player):
@@ -47,17 +47,11 @@ def login():
     return return_player
 
 
-
-        # user = input("\nUsername: \n")
-        # print(f"Good luck {user}")
-        # start_game()
-
 def validate_user(return_player: str):
     """
     Checks for acceptable input
     Alert error if not
-    Args:
-    return_player (str): user input 
+    return_player (str): user input
     """
     try:
         str(return_player)
@@ -70,26 +64,49 @@ def validate_user(return_player: str):
     return True
 
 
+def new_player():
+    """
+    Directs player to create username and password.
+    Stores input in Google Sheet.
+    """
+    user_login = SHEET.worksheet("usernames")
+    pass_login = SHEET.worksheet("passwords")
+    new_user = input("\nUsername: \n")
+    user_list = str.split(new_user)
+    user_login.append_row(user_list)
+    print(f"Welcome {new_user}, good luck")
+    new_pass = input("Enter password:\n")
+    pass_list = str.split(new_pass)
+    pass_login.append_row(pass_list)
+    print("Password saved.\n")
+    start_game()
 
-# def update_username_sheet(data):
-#     """
 
-#     """
+def known_player():
+    """
+    Return user must enter username and password.
+    Checks value against info stored in Google Sheet.
+    If invalid, return to log in.
+    """
+    user_login = SHEET.worksheet("usernames")
+    pass_login = SHEET.worksheet("passwords")
+    known_user = input("\nUsername: \n")
+    check_known = user_login.find(known_user)
+    if check_known is None:
+        print("User not found, please check your details and try again.\n")
+        login()
+    else:
+        print(f"Welcome back {known_user}.\n")
+    known_pass = input("Password: \n")
+    check_pass = pass_login.find(known_pass)
+    if check_pass is None:
+        print("Password incorrect, please try again.\n")
+        login()
+    else:
+        print("Password verified.")
+    start_game()
 
-# def validate_user(values):
-#     """
-#     Validates username against googlesheets.
-#     Return error message if in user.
-#     Prompt to try again
-#     """
-#     not_available = SHEET["A"].value
-#     if user in not_available:
-#         print("Username in use, please choose again")
-#         login()
-#     else:
-#         start_game()
 
-    
 class GameBoard:
     """
     Stores the values for generating the game board.
@@ -112,7 +129,7 @@ class GameBoard:
         """
         prints out board and adds colour
         """
-        print(f"\n{Fore.CYAN}{Back.BLACK}  A B C D E F")
+        print(f"\n{Fore.CYAN}{Back.BLACK}  A B C D E F ")
         print(" ^^^^^^^^^^^^^")
         row_number = 1
         for row in self.board:
@@ -280,7 +297,7 @@ def end_game() -> str:
     if str(play_again) == 'Y':
         start_game()
     elif str(play_again) == 'N':
-        print(f"Thank you for playing, see you next time {user}")
+        print("Thank you for playing, see you next time")
     elif str(play_again) not in {"Y", "N"}:
         print("please enter Y/N")
         end_game()
