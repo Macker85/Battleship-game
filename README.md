@@ -260,9 +260,9 @@ There were no errors or warnings flagged in test_login.py
 | Check Login function would not validate user input. | Changed syntax of the Login function if/elif statements. |
 
 ## Deployment
-<!-- Use the following steps to deploy the poject to Heroku:
+Use the following steps to deploy the poject to Heroku:
 1. Use the "pip freeze -> requiremnts.txt" command in the gitPod terminal; to save any libraries that need to be installed to the project files in Heroku.
-2. Login or create a Heroku account.
+2. You will need a Heroku account for deployment, if you don't have one you will need to create one. Once done, log into Heroku.
 3. Click the "New" button in the upper right corner and select "Create New App".
 4. Choose an app name and your region and click "Create App". Note: the app name must be unique.
 5. Go to the "Settings" tab, add the python build pack and then the node.js build pack. This is to ensure the project functions correctly with the Code Institute pre-installed template.
@@ -271,7 +271,7 @@ There were no errors or warnings flagged in test_login.py
 8. Go to the "Deploy" tab and pick GitHub as a deployment method.
 9. Search for a repository to connect to.
 10. Click enable automatic deploys and then deploy branch.
-11. Wait for the app to build and then click on the "View" link. -->
+11. Wait for the app to build and then click on the "View" link.
 
 You can fork the repository by following these steps:
 <!-- 1. Go to the GitHub repository.
