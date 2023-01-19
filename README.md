@@ -64,12 +64,12 @@ The application provides a working battleships game for a single user to play ag
 ## Technical Design
 
 ### Flowchart
-<details><summary>Login</summary>
+<!-- <details><summary>Login</summary>
 <img src="docs/logic_diagrams/login_chart.jpeg">
 </details>
 <details><summary>Game</summary>
 <img src="docs/logic_diagrams/game_chart.jpeg">
-</details>
+</details> -->
 
 ### Data Modelling
 <!-- - The data stored in the Google Spreadsheet is a combination of a username and password entered by the user on the login page.
@@ -87,14 +87,14 @@ The application provides a working battleships game for a single user to play ag
 - Python 3
 
 ### Frameworks & Tools
-<!-- - LucidChart
 - Heroku
 - Google Drive: Used as a cloud hosting platform for the spreadsheet.
 - Google Spreadsheet: Used because Python does not have a built in library to store data in an external spreadsheet.
-- pycodestyle: Used as a validation tool instead of pep8 online.
+- pep8 CI validator
 - gitHub
 - Gitpod
-- Git -->
+- Git
+- LucidChart
 
 ## Features
 
@@ -291,14 +291,10 @@ You can clone the repository by following these steps:
 
 ## Credits
 
-### Media
-<!-- - ASCII art: https://asciiart.website/index.php?art=transportation/nautical -->
-
 ### Code
-<!-- - Code Institute Python lessons.
 - Code Institute Love Sandwiches project.
+- Fabio Musanni https://www.youtube.com/watch?v=LUWyA3m_-r0&t=283s
 - Knowledge Mavens https://www.youtube.com/watch?v=alJH_c9t4zw&t=673s
-- Corey Schafer https://www.youtube.com/watch?v=6tNS--WetLI -->
 
 ## Acknowledgments
 <!-- I would like to take the opportunity to thank:
