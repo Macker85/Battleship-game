@@ -234,8 +234,8 @@ def start_game():
     player_target_board = GameBoard([[" "] * 6 for i in range(6)])
     Battleship.deploy_fleet(enemy_board)
     Battleship.deploy_fleet(player_board)
-    turns = 15
-    enemy_turns = 15
+    turns = 20
+    enemy_turns = 20
     while turns > 0:
         GameBoard.print_game(player_target_board)
         GameBoard.print_game(enemy_target_board)
@@ -246,7 +246,7 @@ def start_game():
         ):
             print("You have already destroyed this location")
             player_x_row, player_y_col = Battleship.get_user_shot(object)
-        if enemy_board.board[player_x_row][player_y_col] == "@":
+        if player_board.board[player_x_row][player_y_col] == "@":
             print("That is a direct hit!")
             player_target_board.board[player_x_row][player_y_col] = "X"
         else:
@@ -266,7 +266,7 @@ def start_game():
             or enemy_target_board.board[enemy_x_row][enemy_y_col] == "X"
         ):
             enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
-        if enemy_board.board[enemy_x_row][enemy_y_col] == "X":
+        if enemy_board.board[enemy_x_row][enemy_y_col] == "@":
             print("That is a direct hit!")
             enemy_target_board.board[enemy_x_row][enemy_y_col] = "X"
         else:
@@ -279,6 +279,7 @@ def start_game():
         if turns == 0:
             print("The enemy is out of ammunition.")
             GameBoard.print_game(enemy_board)
+    end_game()
 
 
 def end_game() -> str:
