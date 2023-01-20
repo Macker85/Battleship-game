@@ -268,10 +268,10 @@ def start_game():
         ):
             enemy_x_row, enemy_y_col = Battleship.get_enemy_shot(object)
         if enemy_board.board[enemy_x_row][enemy_y_col] == "@":
-            print("That is a direct hit!")
+            print("The enemy has sunk one of your ships!")
             enemy_target_board.board[enemy_x_row][enemy_y_col] = "X"
         else:
-            print("That is a miss!")
+            print("The enemy has missed!")
             enemy_target_board.board[enemy_x_row][enemy_y_col] = "-"
         if Battleship.count_direct_hits(enemy_board) == 5:
             print("Your fleet has been destroyed!")
