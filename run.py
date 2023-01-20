@@ -20,7 +20,7 @@ SHEET = GSPREAD_CLIENT.open("battleship usernames")
 
 username = SHEET.worksheet("usernames")
 
-MARKER = '~' * 40
+MARKER = '~' * 45
 
 
 def login():
@@ -31,9 +31,10 @@ def login():
     """
     while True:
         print(MARKER)
-        print("         Welcome to Battleship")
-        print("      A game of logic and chance")
-        print("Deploy your fleet and prepare for battle")
+        print("           Welcome to Battleship")
+        print("        A game of logic and chance")
+        print("   Deploy your fleet and prepare for battle")
+        print("Board size 6 x 6. Ships to sink = 5. turns 20 ")
         print(MARKER)
         return_player = input("Have you played before? Y/N \n").upper()
 
@@ -127,7 +128,7 @@ class GameBoard:
 
     def print_game(self):
         """
-        prints out board and adds colour
+        prints out board and adds colour to terminal.
         """
         print(f"\n{Fore.CYAN}{Back.BLACK}  A B C D E F ")
         print(" ^^^^^^^^^^^^^")
