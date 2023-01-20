@@ -58,18 +58,17 @@ The application provides a working battleships game for a single user to play ag
 4. Get real-time feedback when playing the game.
 5. To play against against a computer opponent.
 6. To be told when the game has been won or lost.
-7. To be able to easily replay the game if wanted.
-8. To be able to easily replay the game if wanted.
+7. To be able to restart or exit the game when finished.
 
 ## Technical Design
 
 ### Flowchart
-<!-- <details><summary>Login</summary>
-<img src="docs/logic_diagrams/login_chart.jpeg">
+<details><summary>Login</summary>
+<img src="DOCS/flow-charts/login-flow.png">
 </details>
 <details><summary>Game</summary>
-<img src="docs/logic_diagrams/game_chart.jpeg">
-</details> -->
+<img src="DOCS/flow-charts/game-flow.png">
+</details>
 
 ### Data Modelling
 <!-- - The data stored in the Google Spreadsheet is a combination of a username and password entered by the user on the login page.
