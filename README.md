@@ -33,11 +33,10 @@ In this game you have a Python generated board of rows and columns and play agai
 11. [Acknowledgments](#acknowledgments)
 
 ## Project Goals 
-<!-- The project goal is to create a logic game using Python. -->
+The goal of this project is to create a logic and chance based game using Python.
 
 ### User Goals
-
-<!-- The application user wants to play a logic game. -->
+The goal for the user is to play a logic and chance game in Python.
 
 ### Site Owner Goals
 <!-- The Battleships game is played on grids on which each player's fleet of battleships are marked. The locations of the fleets are concealed from the other player. Players call shots at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
@@ -46,20 +45,21 @@ The application provides a working battleships game for a single user to play ag
 ## User Experience
 
 ### Target Audience
-<!-- - Younger users who like playing games.
+- Users who like playing games or challenging themselves with logical games.
 - Users who are looking for a game to pass time on during a break.
-- Older users who are looking for a logic challenge. -->
+- Nostalgic users that may have played Battleship when they were younger.
 
 ### User Requirements and Expectations
 
 ### User Stories
-<!-- 1. To create a personal username.
+1. Told the perameters of the game.
+1. Create a personal username and have it used in the experience.
 2. To be able to return to the game with my username and password.
-3. To have an immersive experience.
-4. To have real-time feedback when playing the game.
-5. To be able to play the game against a computer opponent.
+4. Get real-time feedback when playing the game.
+5. To play against against a computer opponent.
 6. To be told when the game has been won or lost.
-7. To be able to easily replay the game if wanted. -->
+7. To be able to easily replay the game if wanted.
+8. To be able to easily replay the game if wanted.
 
 ## Technical Design
 
