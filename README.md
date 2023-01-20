@@ -64,20 +64,20 @@ The application provides a working battleships game for a single user to play ag
 
 ### Flowchart
 <details><summary>Login</summary>
-<img src="DOCS/flow-charts/login-flow.png">
+![login flow](/DOCS/flow-charts/login-flow.png)
 </details>
 <details><summary>Game</summary>
-<img src="DOCS/flow-charts/game-flow.png">
+![login flow](/DOCS/flow-charts/game-flow.png)
 </details>
 
 ### Data Modelling
-<!-- - The data stored in the Google Spreadsheet is a combination of a username and password entered by the user on the login page.
+- The data stored in the Google Spreadsheet is a combination of a username and password entered by the user on the login page.
 
-- A new user will enter their choice of username and password which will be stored in the spreadsheet 'user_data_sheet' in the worksheet 'username'. Their password will be stored in the same spreadsheet but in the 'password' worksheet.
+- A new user will enter their choice of username and password which will be stored in the spreadsheet "battleship usernames" which will b accessed with SHEET = GSPREAD_CLIENT.open("battleship usernames") and then in the worksheet 'usernames'. Their password will be stored in the same spreadsheet but in the 'passwords' worksheet.
 
-- A returning user will type in their username, the function will check the 'username' worksheet for a matching value and return a welcome message if true. The user will be prompted for a password and the function will, once again, check the 'password' worksheet for a matching value. If the function returns both inputs then the user will be allowed to play the game.
+- A returning user will type in their username, the function will check the 'usernames' worksheet for a matching value and return a welcome message if true. The user will be prompted for a password and the function will, once again, check the 'passwords' worksheet for a matching value. If the function returns both inputs then the user will be allowed to play the game.
 
-- If the returning user inputs do not match, the user will be taken to the start of the login function where they can try again or enter a new set of credentials. -->
+- If the returning user inputs do not match, the user will be taken to the start of the login function where they can try again or enter a new set of credentials.
 
 
 ## Technologies Used
