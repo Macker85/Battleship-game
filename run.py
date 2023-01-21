@@ -296,9 +296,9 @@ def end_game() -> str:
         start_game()
     elif str(play_again) == 'N':
         print("Thank you for playing, see you next time")
+        quit()
     elif str(play_again) not in {"Y", "N"}:
         print("please enter Y/N")
-        end_game()
 
 
 if __name__ == '__main__':

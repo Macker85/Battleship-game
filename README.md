@@ -39,8 +39,10 @@ The goal of this project is to create a logic and chance based game using Python
 The goal for the user is to play a logic and chance game in Python.
 
 ### Site Owner Goals
-<!-- The Battleships game is played on grids on which each player's fleet of battleships are marked. The locations of the fleets are concealed from the other player. Players call shots at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
-The application provides a working battleships game for a single user to play against the computer. -->
+- Create an application that challenges players use of logic.
+- Create an application that give the user instant feedback after input.
+- Make the application easily understandable and easy to follow.
+- Ensure the application is intuitive to navigate.
 
 ## User Experience
 
@@ -53,8 +55,8 @@ The application provides a working battleships game for a single user to play ag
 
 ### User Stories
 1. Told the perameters of the game.
-1. Create a personal username and have it used in the experience.
-2. To be able to return to the game with my username and password.
+2. Create a personal username and have it used in the experience.
+3. To be able to return to the game with my username and password.
 4. Get real-time feedback when playing the game.
 5. To play against against a computer opponent.
 6. To be told when the game has been won or lost.
@@ -97,16 +99,17 @@ The application provides a working battleships game for a single user to play ag
 
 ## Features
 
-### Welcome Message
-<!-- - Shows a welcome message.
-User Stories covered: 3, 4
-<img src="docs/features/welcome_screen.png"> -->
+### Welcome Message and game parameters
+- Shows a welcome message with game parameters.
+User Stories covered: 1, 4
+<img src="DOCS/games/welcome-screen.png">
 
 ### Username/Password Input
-<!-- - Prompts a user to input a username and password.
-- Returning users can have their credentials recoved from a spreadsheet.
-User Stories covered: 1,3
-<img src="docs/features/username_password.png"> -->
+- Prompts a user to input a username and password.
+- Returning users will have their credentials checked from the associateed spreadsheet.
+User Stories covered: 2,3,4
+<img src="DOCS/games/username-password.png">
+<img src="DOCS/games/username-password2.png">
 
 ### Battleships Screen 
 <!-- - Shows an ASCII art warship and logo.
@@ -260,8 +263,8 @@ There were no errors or warnings flagged in test_login.py
 | Computer counting all ships as hits and ending game | Changed ship symbol |
 
 ## Deployment
-<!-- Use the following steps to deploy the poject to Heroku:
-1. Use the "pip freeze -> requiremnts.txt" command in the gitPod terminal; to save any libraries that need to be installed to the project files in Heroku.
+Use the following steps to deploy the poject to Heroku:
+1. Use the "pip3 freeze -> requiremnts.txt" command in the gitPod terminal; to save any libraries that need to be installed to the project files in Heroku.
 2. You will need a Heroku account for deployment, if you don't have one you will need to create one. Once done, log into Heroku.
 3. Click the "New" button in the upper right corner and select "Create New App".
 4. Choose an app name and your region and click "Create App". Note: the app name must be unique.
@@ -271,7 +274,7 @@ There were no errors or warnings flagged in test_login.py
 8. Go to the "Deploy" tab and pick GitHub as a deployment method.
 9. Search for a repository to connect to.
 10. Click enable automatic deploys and then deploy branch.
-11. Wait for the app to build and then click on the "View" link. -->
+11. Wait for the app to build and then click on the "View" link.
 
 You can fork the repository by following these steps:
 1. Login or signup to [GitHub](https://github.com/)
