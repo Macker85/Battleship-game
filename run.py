@@ -252,10 +252,10 @@ def start_game():
         else:
             print("That is a miss!")
             player_target_board.board[player_x_row][player_y_col] = "-"
+            turns -= 1
         if Battleship.count_direct_hits(player_target_board) == 5:
             print("You sunk all enemy battleships!")
             break
-        turns -= 1
         print(f"you have {turns} turns remaining")
         if turns == 0:
             print("You have run out of ammunition")
@@ -272,10 +272,10 @@ def start_game():
         else:
             print("The enemy has missed!")
             enemy_target_board.board[enemy_x_row][enemy_y_col] = "-"
+            enemy_turns -= 1
         if Battleship.count_direct_hits(enemy_target_board) == 5:
             print("Your fleet has been destroyed!")
             break
-        enemy_turns -= 1
         if turns == 0:
             print("The enemy is out of ammunition.")
             GameBoard.print_game(enemy_target_board)
