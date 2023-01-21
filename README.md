@@ -111,15 +111,10 @@ User Stories covered: 2,3,4
 <img src="DOCS/games/username-password.png">
 <img src="DOCS/games/username-password2.png">
 
-### Battleships Screen 
-<!-- - Shows an ASCII art warship and logo.
-User Stories covered: 3
-<img src="docs/features/main_screen.png"> -->
-
 ### Game Board
-<!-- - Shows the generated game boards for the user and the computer.
-User Stories covered: 3, 4, 5
-<img src="docs/features/game_board.png"> -->
+- Generates the game boards for the user and the computer.
+User Stories covered: 4, 5
+<img src="">
 
 ### Game Inputs
 <!-- - Allows the user to input their guesses and feedsback the result.

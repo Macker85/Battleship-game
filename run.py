@@ -154,7 +154,6 @@ class Battleship:
         """
         for i in range(5):
             self.x_row, self.y_col = random.randint(0, 5), random.randint(0, 5)
-            print(f"Co-ordinate {self.x_row} {self.y_col}")
             self.board[self.x_row][self.y_col] = '@'
         return self.board
 
@@ -299,6 +298,7 @@ def end_game() -> str:
         quit()
     elif str(play_again) not in {"Y", "N"}:
         print("please enter Y/N")
+        end_game()
 
 
 if __name__ == '__main__':
