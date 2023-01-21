@@ -5,7 +5,7 @@ In this game you have a Python generated board of rows and columns and play agai
 
 (Developer: Paul McCormack)
 
-![Start screen](/DOCS/game/start_screen.png)
+![Start screen](DOCS/game/welcome-screen.png)
 
 [Live webpage](https://battleship-pp3-macker85.herokuapp.com/)
 
@@ -16,8 +16,7 @@ In this game you have a Python generated board of rows and columns and play agai
     2. [Site Owner Goals](#site-owner-goals)
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
-    2. [User Requirements and Expectations](#user-requirements-and-expectations)
-    3. [User Stories](#user-stories)
+    2. [User Stories](#user-stories)
 3. [Technical Design](#technical-design)
     1. [Flowchart](#flowchart)
 4. [Technologies Used](#technologies-used)
@@ -51,8 +50,6 @@ The goal for the user is to play a logic and chance game in Python.
 - Users who are looking for a game to pass time on during a break.
 - Nostalgic users that may have played Battleship when they were younger.
 
-### User Requirements and Expectations
-
 ### User Stories
 1. Told the perameters of the game.
 2. Create a personal username and have it used in the experience.
@@ -75,12 +72,9 @@ The goal for the user is to play a logic and chance game in Python.
 ### Data Modelling
 - The data stored in the Google Spreadsheet is a combination of a username and password entered by the user on the login page.
 
-- A new user will enter their choice of username and password which will be stored in the spreadsheet "battleship usernames" which will b accessed with SHEET = GSPREAD_CLIENT.open("battleship usernames") and then in the worksheet 'usernames'. Their password will be stored in the same spreadsheet but in the 'passwords' worksheet.
+- A new user will enter their choice of username and password which will be stored in the spreadsheet "battleship usernames" which will b accessed with SHEET = GSPREAD_CLIENT.open("battleship usernames") and then in the worksheet 'usernames'. Their password will be stored in the same spreadsheet but in the "passwords" worksheet.
 
-- A returning user will type in their username, the function will check the 'usernames' worksheet for a matching value and return a welcome message if true. The user will be prompted for a password and the function will, once again, check the 'passwords' worksheet for a matching value. If the function returns both inputs then the user will be allowed to play the game.
-
-- If the returning user inputs do not match, the user will be taken to the start of the login function where they can try again or enter a new set of credentials.
-
+- A returning user will type in their username, the function will check the "usernames" worksheet for a matching value and return a welcome message if true. The user will be prompted for a password and the function will then check the "passwords" worksheet for a matching value. If the function returns both inputs then the user will be allowed to play the game, if not they will be prompted to try again at the login function.
 
 ## Technologies Used
 
@@ -102,25 +96,25 @@ The goal for the user is to play a logic and chance game in Python.
 ### Welcome Message and game parameters
 - Shows a welcome message with game parameters.
 User Stories covered: 1, 4
-<img src="DOCS/games/welcome-screen.png">
+![Start screen](DOCS/game/welcome-screen.png)
 
 ### Username/Password Input
 - Prompts a user to input a username and password.
 - Returning users will have their credentials checked from the associateed spreadsheet.
 User Stories covered: 2,3,4
-<img src="DOCS/games/username-password.png">
-<img src="DOCS/games/username-password2.png">
+![Username screen](DOCS/game/username-password.png)
+![Username screen](DOCS/game/username-password2.png)
 
 ### Game Board
 - Generates the game boards for the user and the computer.
 User Stories covered: 4, 5
-<img src="">
+![Generate game](DOCS/game/generate-game.png)
 
 ### Game Inputs
 - Allows the user to input their guesses and feedsback the result.
 - Shows the computer's guess with outcome of guess.
 User Stories covered: 4, 5
-<img src="">
+![Input guess](DOCS/game/enter-guess.png)
 
 ### Game Over
 - Shows the end-of-game state to the user once a victory condition has been met.
@@ -132,12 +126,13 @@ User Stories covered: 6, 7
 ## Validation
 
 ### PEP8 validation
-Checked on 
+Checked on Code institute validator - https://pep8ci.herokuapp.com/
+![Validation](DOCS/deployment/validation.png)
 
 
 ### Testing user stories
 
-1. To create a personal username.
+<!-- 1. Told the perameters of the game.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -147,7 +142,7 @@ Checked on
 <img src="docs/user_testing/user_test_1_username.png">
 </details>
 
-2. To be able to return to the game with my username and password.
+2. Create a personal username and have it used in the experience.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -157,7 +152,7 @@ Checked on
 <img src="docs/user_testing/user_test_2_return.png">
 </details>
 
-3. To have an immersive experience.
+3. To be able to return to the game with my username and password.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -179,7 +174,7 @@ Checked on
 <img src="docs/user_testing/user_test_3_inputs.png">
 </details>
 
-4. To have real-time feedback when playing the game.
+4. Get real-time feedback when playing the game.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -198,7 +193,7 @@ Checked on
 </details>
 
 
-5. To be able to play the game against a computer opponent.
+5. To play against against a computer opponent.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -227,7 +222,7 @@ Checked on
 <img src="docs/user_testing/user_test_6_game_over.png">
 </details>
 
-7. To be able to easily replay the game if wanted.
+7. To be able to restart or exit the game when finished.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -235,16 +230,17 @@ Checked on
 
 <details><summary>Game Over</summary>
 <img src="docs/user_testing/user_test_7_replay.png">
-</details>
+</details> -->
 
 ## Bugs
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 | Spacings between classes too small, stopped programme running. | adjusted spacings |
-| Game crashing after guess input. | Fix typo in y-col input. |
+| Game crashing after guess input. | Fixed typo in y-col input. |
 | Game looping after entering new player | Fixed typo in new player function |
 | Computer counting all ships as hits and ending game | Changed ship symbol |
+| Turn counter going down after hit, leading to player always out of turns first | Moved turn counter into miss logic |
 
 ## Deployment
 Use the following steps to deploy the poject to Heroku:
@@ -288,3 +284,4 @@ I would like to take the opportunity to thank:
 - My mentor Jack Wachira for his feedback, guidance and advice.
 - The alumni and other community members on Slack.
 - My class mates of the September 2022 class.
+- My wife Ciara for her patience and support while I go back to education.

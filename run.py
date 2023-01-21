@@ -289,15 +289,15 @@ def end_game() -> str:
     Asks user to play again or exit.
     """
     print("Game over!")
-    play_again = input("Play again? Y/N: \n").upper
+    play_again = input("Play again? Y/N: \n").upper()
 
     if str(play_again) == 'Y':
         start_game()
     elif str(play_again) == 'N':
-        print("Thank you for playing, see you next time")
+        print("Thank you for playing, see you next time.")
         quit()
     elif str(play_again) not in {"Y", "N"}:
-        print("please enter Y/N")
+        print("please enter Y/N.")
         end_game()
 
 
