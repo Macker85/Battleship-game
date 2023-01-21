@@ -132,18 +132,7 @@ User Stories covered: 6, 7
 ## Validation
 
 ### PEP8 validation
-<!-- At the time of creation, the PEP8 online Python validation website was inoperative. To validate the code, a PEP8 validator that is built into the GitPod Workspace was used.
-
-1. Run the command 'pip3 install pycodestyle'. (Note that this extension may already be installed, in which case this command will do nothing.)
-2. In the workspace, press Ctrl+Shift+P (or Cmd+Shift+P on Mac).
-3. Type the word 'linter' into the search bar that appears. 
-4. Click on 'Python: Select Linter' from the filtered results.
-5. Select 'pycodestyle' from the list.
-6. PEP8 errors will now be underlined in red, as well as being listed in the PROBLEMS tab beside the terminal.
-
-There were no errors or warnings flagged in login.py.
-There were no errors or warnings flagged in test_login.py
-15 yellow warnings were flagged in run.py. These are down to the symbol combinations used in the ASCII art and logo. These are printed direct to the console and not used in any functions. -->
+Checked on 
 
 
 ### Testing user stories
@@ -295,8 +284,7 @@ You can clone the repository by following these steps:
 - Knowledge Mavens https://www.youtube.com/watch?v=alJH_c9t4zw&t=673s
 
 ## Acknowledgments
-<!-- I would like to take the opportunity to thank:
-- My mentor Mo Shami for his feedback, advice, guidance and support.
-- My beautiful wife, Megan, for her continued love and support.
-- Jim, Sawyer, and the other fantasic members of Code Institute's community team.
-- The great people of class June '22 for their ideas and humour. -->
+I would like to take the opportunity to thank:
+- My mentor Jack Wachira for his feedback, guidance and advice.
+- The alumni and other community members on Slack.
+- My class mates of the September 2022 class.
