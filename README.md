@@ -117,16 +117,16 @@ User Stories covered: 4, 5
 <img src="">
 
 ### Game Inputs
-<!-- - Allows the user to input their guesses and feedsback the result.
-- Shows the computer's guess.
-User Stories covered: 3, 4, 5
-<img src="docs/features/game_inputs.png"> -->
+- Allows the user to input their guesses and feedsback the result.
+- Shows the computer's guess with outcome of guess.
+User Stories covered: 4, 5
+<img src="">
 
 ### Game Over
-<!-- - Shows the end-of-game state to the user once a victory condition has been met.
+- Shows the end-of-game state to the user once a victory condition has been met.
 - Allows user to retry the game or to quit the program.
-User Stories covered: 4, 6, 7
-<img src="docs/features/game_over.png"> -->
+User Stories covered: 6, 7
+<img src="">
 
 
 ## Validation
