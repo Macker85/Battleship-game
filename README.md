@@ -64,10 +64,10 @@ The application provides a working battleships game for a single user to play ag
 
 ### Flowchart
 <details><summary>Login</summary>
-![login flow](/DOCS/flow-charts/login-flow.png)
+<img src="DOCS/flow-charts/login-flow.png">
 </details>
 <details><summary>Game</summary>
-![login flow](/DOCS/flow-charts/game-flow.png)
+<img src="DOCS/flow-charts/game-flow.png">
 </details>
 
 ### Data Modelling
