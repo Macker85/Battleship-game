@@ -1,7 +1,7 @@
 # Battleships
 
 Battleship is a game of chance and logic where players attempt to sink each others ships by guessing co-ordinates.
-In this game you have a Python generated board of rows and columns and play against the computer that will randomised guesses to try sink the users ships.
+In this game you have a Python generated board of rows and columns and play against the computer that will randomise guesses to try sink the users ships.
 
 (Developer: Paul McCormack)
 
@@ -55,7 +55,7 @@ The goal for the user is to play a logic and chance game in Python.
 2. Create a personal username and have it used in the experience.
 3. To be able to return to the game with my username and password.
 4. Get real-time feedback when playing the game.
-5. To play against against a computer opponent.
+5. To play against a computer opponent.
 6. To be told when the game has been won or lost.
 7. To be able to restart or exit the game when finished.
 
@@ -69,7 +69,7 @@ The goal for the user is to play a logic and chance game in Python.
 <img src="DOCS/flow-charts/game-flow.png">
 </details>
 
-### Data Modelling
+### Data Modeling
 - The data stored in the Google Spreadsheet is a combination of a username and password entered by the user on the login page.
 
 - A new user will enter their choice of username and password which will be stored in the spreadsheet "battleship usernames" which will b accessed with SHEET = GSPREAD_CLIENT.open("battleship usernames") and then in the worksheet 'usernames'. Their password will be stored in the same spreadsheet but in the "passwords" worksheet.
@@ -86,7 +86,7 @@ The goal for the user is to play a logic and chance game in Python.
 - Google Drive: Used as a cloud hosting platform for the spreadsheet.
 - Google Spreadsheet: Used because Python does not have a built in library to store data in an external spreadsheet.
 - pep8 CI validator
-- gitHub
+- GitHub
 - Gitpod
 - LucidChart
 
@@ -99,7 +99,7 @@ User Stories covered: 1, 4
 
 ### Username/Password Input
 - Prompts a user to input a username and password.
-- Returning users will have their credentials checked from the associateed spreadsheet.
+- Returning users will have their credentials checked from the associated spreadsheet.
 User Stories covered: 2,3,4
 ![Username screen](DOCS/game/username-password.png)
 ![Username screen](DOCS/game/username-password2.png)
@@ -110,7 +110,7 @@ User Stories covered: 4, 5
 ![Generate game](DOCS/game/generate-game.png)
 
 ### Game Inputs
-- Allows the user to input their guesses and feedsback the result.
+- Allows the user to input their guesses and feeds back the result.
 - Shows the computer's guess with outcome of guess.
 User Stories covered: 4, 5
 ![Input guess](DOCS/game/enter-guess.png)
@@ -135,7 +135,7 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Login screen. | Loads at running of programme. | Shows game parameters and welcomes and asks user if they have played before. | Working as expected. |
+| Login screen. | Loads at running of program. | Shows game parameters and welcomes and asks user if they have played before. | Working as expected. |
 
 ![Login screen](DOCS/game/welcome-screen.png)
 
@@ -143,7 +143,7 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Login Screen. | Input 'N' and create username and password. | Accepts input and checks spreadseet for the input values. | Working as expected. 
+| Login Screen. | Input 'N' and create username and password. | Accepts input and checks spreadsheet for the input values. | Working as expected. 
 
 ![Create user](DOCS/game/username-password2.png)
 
@@ -159,17 +159,17 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Welcome Screen. | Input username and password. | Console feedsback messages to user. | Working as expected. |
+| Welcome Screen. | Input username and password. | Console feeds back messages to user. | Working as expected. |
 | Game Board. | Generates at the start of the game and refreshes after every turn. | Game board is printed and updated with user and computer inputs after each turn. | Working as expected. |
 | Game Inputs. | User inputs their choice of co-ordinates. | Results are printed back to the user after each turn. | Working as expected. |
-| Game Inputs. | User inputs their choice new game or exit programme. | Results are printed back to the user after each turn. | Working as expected. |
+| Game Inputs. | User inputs their choice new game or exit program. | Results are printed back to the user after each turn. | Working as expected. |
 
 ![Login screen](DOCS/game/username-password2.png)
 ![Generate game](DOCS/game/generate-game.png)
 ![Input guess](DOCS/game/enter-guess.png)
 ![Play again, yes](DOCS/game/play-again-yes.png)
 
-5. To play against against a computer opponent.
+5. To play against a computer opponent.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -191,7 +191,7 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| End game function. | After a game over condition is met. User inputs Y or N afer prompt. | Input of Y re-runs the game. Input of N exits the program. | Working as expected. |
+| End game function. | After a game over condition is met. User inputs Y or N after prompt. | Input of Y re-runs the game. Input of N exits the program. | Working as expected. |
 
 ![Play again, yes](DOCS/game/play-again-yes.png)
 ![Play again, no](DOCS/game/play-again-no.png)
@@ -200,15 +200,15 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| Spacings between classes too small, stopped programme running. | adjusted spacings |
+| Spacings between classes too small, stopped program running. | adjusted spacings |
 | Game crashing after guess input. | Fixed typo in y-col input. |
 | Game looping after entering new player | Fixed typo in new player function |
 | Computer counting all ships as hits and ending game | Changed ship symbol |
 | Turn counter going down after hit, leading to player always out of turns first | Moved turn counter into miss logic |
 
 ## Deployment
-Use the following steps to deploy the poject to Heroku:
-1. Use the "pip3 freeze -> requiremnts.txt" command in the gitPod terminal; to save any libraries that need to be installed to the project files in Heroku.
+Use the following steps to deploy the project to Heroku:
+1. Use the "pip3 freeze -> requiremnts.txt" command in the terminal; to save any libraries that need to be installed to the project files in Heroku.
 ![Requirements](DOCS/heroku/requirements.png)
 2. You will need a Heroku account for deployment, if you don't have one you will need to create one. Once done, log into Heroku.
 ![New account](DOCS/heroku/new-account.png)
