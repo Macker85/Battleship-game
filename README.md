@@ -210,10 +210,15 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 ## Deployment
 Use the following steps to deploy the poject to Heroku:
 1. Use the "pip3 freeze -> requiremnts.txt" command in the gitPod terminal; to save any libraries that need to be installed to the project files in Heroku.
+![Requirements](DOCS/heroku/requirements.png)
 2. You will need a Heroku account for deployment, if you don't have one you will need to create one. Once done, log into Heroku.
+![New account](DOCS/heroku/new-account.png)
 3. Click the "New" button in the upper right corner and select "Create New App".
+![Create new](DOCS/heroku/create-new.png)
 4. Choose an app name and your region and click "Create App". Note: the app name must be unique.
+![Name and region](DOCS/heroku/name-region.png)
 5. Go to the "Settings" tab, add the python build pack and then the node.js build pack. This is to ensure the project functions correctly with the Code Institute pre-installed template.
+![Add build packs](DOCS/heroku/add-build-packs.png)
 6. Create a "Config VAR" with the 'CREDS' key and the enter the value of the creds.json file.
 7. Create a second "Config VAR" with the key of 'PORT' and value of '8000'
 8. Go to the "Deploy" tab and pick GitHub as a deployment method.
