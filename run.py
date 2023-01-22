@@ -152,7 +152,7 @@ class Battleship:
         For statement loops through ships positions.
         Generates random integers and assigns 'X' as a ship in location.
         """
-        for i in range(1):
+        for i in range(5):
             self.x_row, self.y_col = random.randint(0, 5), random.randint(0, 5)
             self.board[self.x_row][self.y_col] = '@'
         return self.board

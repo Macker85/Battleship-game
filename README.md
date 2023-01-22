@@ -186,17 +186,16 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 |-------------|------------|---------------------|-------------------|
 | Function that runs after game parameters are complete. | After a, end game condition is met, print statement. | End game result is printed back to the user. | Working as expected. |
 
-
+![Play again](DOCS/game/play-again.png)
 
 7. To be able to restart or exit the game when finished.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Game Over. | After a game over condition is met. User inputs Y or N | Input of Y re-runs the game. Input of N exits the program. | Working as implemented. |
+| End game function. | After a game over condition is met. User inputs Y or N afer prompt. | Input of Y re-runs the game. Input of N exits the program. | Working as expected. |
 
-<details><summary>Game Over</summary>
-<img src="docs/user_testing/user_test_7_replay.png">
-</details>
+![Play again, yes](DOCS/game/play-again-yes.png)
+![Play again, no](DOCS/game/play-again-no.png)
 
 ## Bugs
 
