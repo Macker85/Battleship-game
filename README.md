@@ -174,30 +174,19 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Game Board. |  Generates at the start of the game and refreshes after every turn. | Game board is printed and updated with user and computer inputs after each turn. | Working as implemented. |
-| Game Inputs. | Computer generates a shot after the user has taken a turn. | Results are updated on the board and printed back to the user after each computer turn. | Working as implemented. |
+| Game Board. |  Generates at the start of the game and refreshes after every turn. | Game board is printed and updated with user and computer inputs after each turn. | Working as expected. |
+| Game Inputs. | Computer generates a shot after the user has taken a turn. | Results are updated on the board and printed back to the user after each computer turn. | Working as expected. |
 
-<details><summary>Game Board</summary>
-<img src="docs/user_testing/user_test_5_board.png">
-</details>
-<details><summary>Game Inputs</summary>
-<img src="docs/user_testing/user_test_5_input.png">
-</details>
-
+![Generate game](DOCS/game/generate-game.png)
+![Input guess](DOCS/game/enter-guess.png)
 
 6. To be told when the game has been won or lost.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Game Inputs. | After a game over condition is met. | Game over condition is printed back to the user. | Working as implemented. |
-| Game Over. | After a game over condition is met. | Results are updated on the board and printed back to the user after each computer turn. | Working as implemented. |
+| Function that runs after game parameters are complete. | After a, end game condition is met, print statement. | End game result is printed back to the user. | Working as expected. |
 
-<details><summary>Game Inputs</summary>
-<img src="docs/user_testing/user_test_6_inputs.png">
-</details>
-<details><summary>Game Over</summary>
-<img src="docs/user_testing/user_test_6_game_over.png">
-</details>
+
 
 7. To be able to restart or exit the game when finished.
 
