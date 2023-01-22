@@ -88,7 +88,6 @@ The goal for the user is to play a logic and chance game in Python.
 - pep8 CI validator
 - gitHub
 - Gitpod
-- Git
 - LucidChart
 
 ## Features
@@ -117,7 +116,7 @@ User Stories covered: 4, 5
 ![Input guess](DOCS/game/enter-guess.png)
 
 ### Game Over
-- Shows the end-of-game set-up to the user once a victory condition has been met.
+- Shows the end-of-game set-up to the user once an end game condition has been met.
 - Allows user to retry the game or to quit the program.
 User Stories covered: 6, 7
 ![Play again, yes](DOCS/game/play-again-yes.png)
@@ -136,7 +135,7 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Login screen. | Loads at running of programme. | Shows game parameters and welcomes and asks user if tehy have played before. | Working as expected. |
+| Login screen. | Loads at running of programme. | Shows game parameters and welcomes and asks user if they have played before. | Working as expected. |
 
 ![Login screen](DOCS/game/welcome-screen.png)
 
@@ -146,15 +145,15 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 |-------------|------------|---------------------|-------------------|
 | Login Screen. | Input 'N' and create username and password. | Accepts input and checks spreadseet for the input values. | Working as expected. 
 
-![Login screen](DOCS/game/welcome-screen.png)
+![Create user](DOCS/game/username-password2.png)
 
 3. To be able to return to the game with my username and password.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Login Screen. | Input username. | Console prints message welcoming the user back to the game. | Working as expected. |
+| Login Screen. | Input username followed by password. | Console prints message welcoming the user back to the game. | Working as expected. |
 
-![Login screen](DOCS/game/username-password2.png)
+![Login details](DOCS/game/username-password.png)
 
 4. Get real-time feedback when playing the game.
 
