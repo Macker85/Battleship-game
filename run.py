@@ -292,6 +292,8 @@ def end_game() -> str:
     play_again = input("Play again? Y/N: \n").upper()
 
     if str(play_again) == 'Y':
+        print(MARKER)
+        print("fleets have been re-deployed")
         start_game()
     elif str(play_again) == 'N':
         print("Thank you for playing, see you next time.")

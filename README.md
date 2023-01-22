@@ -51,7 +51,7 @@ The goal for the user is to play a logic and chance game in Python.
 - Nostalgic users that may have played Battleship when they were younger.
 
 ### User Stories
-1. Told the perameters of the game.
+1. Told the parameters of the game.
 2. Create a personal username and have it used in the experience.
 3. To be able to return to the game with my username and password.
 4. Get real-time feedback when playing the game.
@@ -117,11 +117,11 @@ User Stories covered: 4, 5
 ![Input guess](DOCS/game/enter-guess.png)
 
 ### Game Over
-- Shows the end-of-game state to the user once a victory condition has been met.
+- Shows the end-of-game set-up to the user once a victory condition has been met.
 - Allows user to retry the game or to quit the program.
 User Stories covered: 6, 7
-<img src="">
-
+![Play again, yes](DOCS/game/play-again-yes.png)
+![Play again, no](DOCS/game/play-again-no.png)
 
 ## Validation
 
@@ -132,47 +132,29 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 ### Testing user stories
 
-<!-- 1. Told the perameters of the game.
+1. Told the parameters of the game.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Welcome Screen. | Input 'Y' to set up a new profile. Enter username. | Accepts input and stores username to spreadsheet. | Working as implemented. |
+| Login screen. | Loads at running of programme. | Shows game parameters and welcomes and asks user if tehy have played before. | Working as expected. |
 
-<details><summary>Welcome Screen</summary>
-<img src="docs/user_testing/user_test_1_username.png">
-</details>
+![Login screen](DOCS/game/welcome-screen.png)
 
 2. Create a personal username and have it used in the experience.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Welcome Screen. | Input 'N' and type in username and password. | Accepts input and checks spreadseet for the input values. | Working as implemented. 
+| Login Screen. | Input 'N' and create username and password. | Accepts input and checks spreadseet for the input values. | Working as expected. 
 
-<details><summary>Welcome Screen</summary>
-<img src="docs/user_testing/user_test_2_return.png">
-</details>
+![Login screen](DOCS/game/welcome-screen.png)
 
 3. To be able to return to the game with my username and password.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Welcome Screen. | Input username. | Console prints message welcoming the user as Admiral. | Working as implemented. |
-| Main Screen. | Shows after user inputs username and password. | Console prints ASCII warship and game logo. | Working as implemented. |
-| Game Board. | Generates upon game start. | Generates a board similar to the board game. | Working as implemented. |
-| Game Inputs. | User inputs co-ordinates to fire on. | Feedback uses military terminology. | Working as implemented. |
+| Login Screen. | Input username. | Console prints message welcoming the user back to the game. | Working as expected. |
 
-<details><summary>Welcome Screen</summary>
-<img src="docs/user_testing/user_test_3_welcome.png">
-</details>
-<details><summary>Main Screen</summary>
-<img src="docs/user_testing/user_test_3_main_screen.png">
-</details>
-<details><summary>Game Board</summary>
-<img src="docs/user_testing/user_test_3_boards.png">
-</details>
-<details><summary>Game Inputs</summary>
-<img src="docs/user_testing/user_test_3_inputs.png">
-</details>
+![Login screen](DOCS/game/username-password2.png)
 
 4. Get real-time feedback when playing the game.
 
@@ -230,7 +212,7 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 <details><summary>Game Over</summary>
 <img src="docs/user_testing/user_test_7_replay.png">
-</details> -->
+</details>
 
 ## Bugs
 
