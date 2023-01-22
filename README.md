@@ -160,20 +160,15 @@ Checked on Code institute validator - https://pep8ci.herokuapp.com/
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Welcome Screen. | Input username and password. | Console feedsback messages to user. | Working as implemented. |
-| Game Board. | Generates at the start of the game and refreshes after every turn. | Game board is printed and updated with user and computer inputs after each turn. | Working as implemented. |
-| Game Inputs. | User inputs their choice of co-ordinates. Computer does the same. | Results are printed back to the user after each turn. | Working as implemented. |
+| Welcome Screen. | Input username and password. | Console feedsback messages to user. | Working as expected. |
+| Game Board. | Generates at the start of the game and refreshes after every turn. | Game board is printed and updated with user and computer inputs after each turn. | Working as expected. |
+| Game Inputs. | User inputs their choice of co-ordinates. | Results are printed back to the user after each turn. | Working as expected. |
+| Game Inputs. | User inputs their choice new game or exit programme. | Results are printed back to the user after each turn. | Working as expected. |
 
-<details><summary>Welcome Screen</summary>
-<img src="docs/user_testing/user_test_4_login.png">
-</details>
-<details><summary>Game Board</summary>
-<img src="docs/user_testing/user_test_4_board.png">
-</details>
-<details><summary>Game Inputs</summary>
-<img src="docs/user_testing/user_test_4_inputs.png">
-</details>
-
+![Login screen](DOCS/game/username-password2.png)
+![Generate game](DOCS/game/generate-game.png)
+![Input guess](DOCS/game/enter-guess.png)
+![Play again, yes](DOCS/game/play-again-yes.png)
 
 5. To play against against a computer opponent.
 
