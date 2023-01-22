@@ -219,12 +219,16 @@ Use the following steps to deploy the poject to Heroku:
 ![Name and region](DOCS/heroku/name-region.png)
 5. Go to the "Settings" tab, add the python build pack and then the node.js build pack. This is to ensure the project functions correctly with the Code Institute pre-installed template.
 ![Add build packs](DOCS/heroku/add-build-packs.png)
-6. Create a "Config VAR" with the 'CREDS' key and the enter the value of the creds.json file.
-7. Create a second "Config VAR" with the key of 'PORT' and value of '8000'
-8. Go to the "Deploy" tab and pick GitHub as a deployment method.
-9. Search for a repository to connect to.
-10. Click enable automatic deploys and then deploy branch.
-11. Wait for the app to build and then click on the "View" link.
+6. Create a "Config VAR" with the 'CREDS' key and the enter the value of the creds.json file, add second "Config VAR" with the key of 'PORT' and value of '8000'.
+![Config vars](DOCS/heroku/config-vars.png)
+7. Go to the "Deploy" tab and pick GitHub as a deployment method.
+![Github deploy](DOCS/heroku/github-deploy.png)
+8. Search for a repository to connect to.
+![Repository deploy](DOCS/heroku/repository.png)
+9. Click enable automatic deploys and then deploy branch.
+![Deploy branch](DOCS/heroku/deploy.png)
+10. Wait for the app to build and then click on the "View" link or "Open app".
+![Open app](DOCS/heroku/open-app.png)
 
 You can fork the repository by following these steps:
 1. Login or signup to [GitHub](https://github.com/)
